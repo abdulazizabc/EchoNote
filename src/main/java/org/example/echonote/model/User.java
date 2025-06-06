@@ -4,7 +4,10 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.example.echonote.dto.ArticleDTO;
 import org.example.echonote.model.enums.RoleType;
+
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -34,5 +37,9 @@ public class User {
     private RoleType role;
 
     private Integer age;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Article> notes;
+
 
 }
