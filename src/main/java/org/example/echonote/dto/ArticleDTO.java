@@ -16,8 +16,6 @@ public class ArticleDTO {
 
     private List<String> tags;
 
-    private LocalDateTime createdAt;
-
     private LocalDateTime updatedAt;
 
     private Integer likesCount;

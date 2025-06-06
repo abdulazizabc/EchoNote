@@ -22,9 +22,6 @@ public class Article {
     @Column(nullable = false)
     private String content;
 
-    @Column(nullable = false)
-    private String author;
-
     @ElementCollection
     private List<String> tags = new ArrayList<>();
 
